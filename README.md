@@ -152,17 +152,20 @@ git clone http://github.com/errbit/errbit.git
   
   * Run `bundle`
 
+  * Copy `config/mongoid.mongolab.yml` to `config/mongoid.yml`
+
   * Create & configure for Heroku
 
 ```bash
 gem install heroku
-heroku create example-errbit --stack cedar
+heroku create example-errbit
 heroku addons:add mongolab:sandbox
 heroku addons:add sendgrid:starter
 heroku config:add HEROKU=true
 heroku config:add SECRET_TOKEN="$(bundle exec rake secret)"
 heroku config:add ERRBIT_HOST=some-hostname.example.com
 heroku config:add ERRBIT_EMAIL_FROM=example@example.com
+heroku labs:enable user-env-compile
 git push heroku master
 ```
 
