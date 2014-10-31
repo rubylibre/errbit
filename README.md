@@ -149,7 +149,7 @@ cap deploy:setup deploy
 git clone http://github.com/errbit/errbit.git
 ```
   * Update `db/seeds.rb` with admin credentials for your initial login.
-  
+
   * Run `bundle`
 
   * Copy `config/mongoid.mongolab.yml` to `config/mongoid.yml`
@@ -527,4 +527,3 @@ Copyright
 ---------
 
 Copyright (c) 2010-2013 Errbit Team. See LICENSE for details.
-
