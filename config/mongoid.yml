@@ -4,6 +4,11 @@
 # Copy this file to config/mongoid.yml,
 # commit it to your repo, then push to heroku.
 
+# production:
+#   uri: <%= ENV['MONGOLAB_URI'] %>
+#   identity_map_enabled: true
+
 production:
-  uri: <%= ENV['MONGOLAB_URI'] %>
-  identity_map_enabled: true
+  sessions:
+    default:
+      uri: <%= ENV['MONGOLAB_URI'] %>
